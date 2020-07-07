@@ -1,0 +1,261 @@
+body { 
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+/*Header */
+header {
+    background-color: #0B4F6C;
+    color: #fff;
+    width: 95%;
+    position: center;
+    display: flex;
+    flex-direction: column;
+}
+    .titulo {
+        display: flex;
+        justify-content: center;
+        font-size: 64px;
+        background-image: url("./images/lolheader.png");
+        margin: 0;
+        padding: 2%;
+  
+    }
+
+    .bajada {
+        margin-left: 40px;
+        font-size: 48px;
+        margin: 2% 5%;
+        font-style: normal;
+        font-weight: normal;
+    }
+    .descripcion {
+        font-size: 24px;
+        margin: 2% 5%;
+        font-style: normal;
+        width: 80%;
+        margin-top: 0;
+        margin-bottom: 3%;
+    }
+/* Sección Elige tu equipo*/    
+.eligecampeones {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        justify-content: center;      
+        align-items: center; 
+    }
+    .eligecampeonestitulo {
+        display: flex;
+        justify-content: center;
+        font-size: 36px;
+    }
+    .envoltoriocampeones { 
+        background: #e5c100;
+        display: flex;
+        width: 65%;
+        height: 250px;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+        .cajacampeon { 
+            background: #C8EAF9;
+            display: flex;
+            align-content: center;
+            width: 15%;
+            height: 200px;
+            border-radius: 10px;
+    }
+    .titulocomparte { 
+        font-size: 30px;
+        margin: 2% 0%;
+        margin-right:39%
+    }
+    .cajacomparte {
+        background: #C4C4C4;
+        width: 65%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7%;
+        border-radius: 10px;
+    }
+        .cajalink {
+            resize: none;
+            width: 50%;
+            height: 60%;
+            margin: 2% 1%
+        }
+        .botoncopiarlink {
+            background: #1487B8;
+            display: flex;
+            width: 25%;
+            height: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        .botoncopiarlink:hover {
+                background-color: #0B4F6C;
+                border-radius: 10px;
+        }
+/* Barra de búsqueda */        
+.barrabusqueda {
+    background: #1487B8;
+    width: 95%;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-bottom: 4%;
+    
+}
+    .lupa {
+        width: 5%;
+        height: 70%;
+        margin: 1%;
+        background-image: url("./images/lupa.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 10px;
+    }
+    .lupa:hover {
+        background-color: #0B4F6C;
+    }
+    .buscador {
+        margin: 0.5% 0%;
+        font-size: 24px;
+    }
+    .filtro {
+        margin-left: auto;
+        color: #fff;
+        background-color: #1487B8;
+        width: 10%;
+        border: none;
+        font-size: 24px;
+
+    }
+    .filtro:hover {
+        background-color: #0B4F6C;
+        border-radius: 10px;
+    }
+    .orden {
+        margin-right: 2%;
+        color: #fff;
+        background-color: #1487B8;
+        width: 10%;
+        border: none;
+        margin-left: 1%;
+        font-size: 24px;
+    }
+    .orden:hover {
+        background-color: #0B4F6C;
+        border-radius: 10px;
+        }
+/* Campeones */
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.campeones {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-bottom: 5%;
+
+}
+    .displaycampeon {
+        display:flex;
+        flex-direction: column;
+        background: #C4C4C4;
+        width: 17%;
+        margin: 1%;
+        
+
+    }
+    .displaycampeon img {
+        width: 100%;
+        object-fit: fill;
+    }
+    .displaycampeon:hover {
+        background-color: #e5c100;
+        opacity: 70%;
+        filter: blur(1px);
+    }
+        .nombrecampeon {
+            background-color: #1487B8;
+            width: 100%;
+        }
+        /*.nombrecampeon:hover {
+            background-color: #0a394d;
+        }*/
+        .championname {
+            font-size: 24px;
+            margin: 5% 10%;
+            color: #fff;
+        }
+
+        /*.championname:hover {
+            background-color: #0a394d;
+        }*/
+
+/* Footer */
+
+footer {
+    background: #A6BBC3;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+    .siguenosenredes {
+        align-self: center;
+    }
+    .redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+    .redessociales { 
+        width:10%;
+        height:50px;
+    }
+    #facebook {
+        background-image: url("./images/logo facebook.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    } 
+    #twitter {
+        background-image: url("./images/logo twitter.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;    
+    }
+    #instagram {
+        background-image: url("./images/logo\ instagram.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }    
+    .infocontacto {
+    background: #020D12;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

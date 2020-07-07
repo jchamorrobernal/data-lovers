@@ -5,10 +5,65 @@
     <title>Data Lovers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <h1 class="titulo">Arma tu LOL</h1>
+      <h2 class="bajada">¡Crea tus mejores equipos!</h2>
+      <p class="descripcion">Con arma tu LOL podrás confeccionar grupos de campeones.
+         Separa los personajes por rol y ver sus estadísticas.
+          También puedes agregarlos y armar un equipo de 5.<br/><br/>
+          ¡Comparte tus campeones con otros invocadores!</p>  
+    </header>
+    <section id="eligecampeones" class="eligecampeones">
+      <h3 class="eligecampeonestitulo">¡Elige a tus campeones!</h3>
+      <div id="envoltoriocampeones" class="envoltoriocampeones">
+        <div id="caja1" class="cajacampeon"></div>
+        <div id="caja2" class="cajacampeon"></div>
+        <div id="caja3" class="cajacampeon"></div>
+        <div id="caja4" class="cajacampeon"></div>
+        <div id="caja5" class="cajacampeon"></div>
+      </div>
+      <h3 class="titulocomparte">¡Comparte tu equipo!</h3>
+      <div id="cajacomparte" class="cajacomparte">
+        <textarea name="cajalink" id="cajalink" class="cajalink" cols="30" rows="1"></textarea>
+        <button id="botoncomparte" class="botoncopiarlink">Copiar link</button>
+      </div>
+    </section>
+    <nav id="barrabusqueda" class="barrabusqueda">
+      <div id="lupa" class="lupa"></div>
+      <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Búsqueda por nombre">
+      <select name="" id="filtro" class="filtro">
+        <option value="assassin">Asesinos</option>
+        <option value="support">Apoyos</option>
+        <option value="fighter">Luchadores</option>
+        <option value="mage">Magos</option>
+        <option value="tank">Tanques</option>
+        <option value="marksman">Tiradores</option>
+      </select>
+      <select name="orden" id="orden" class="orden">
+        <option value="AalaZ">A>Z</option>
+        <option value="ZalaA">Z>A</option>
+      </select>
+    </nav>
+    <main>
+      <section id="Campeones" class="campeones">
+      </section>
+    </main>
+    <footer>
+      <h3 class="siguenosenredes">¡Siguenos en redes sociales!</h3>
+      <div class="redes">
+      <figure id="facebook" class="redessociales"></figure>
+      <figure id="twitter" class="redessociales"></figure>
+      <figure id="instagram" class="redessociales"></figure>
+      </div>
+      <section id="infocontacto" class="infocontacto">
+        <h3>Contacto: contacto@armatulol.com</h3>
+        <p>Copyright 2020</p>
+      </section>
+    </footer>
     <script type="module" src="main.js"></script>
   </body>
 </html>
