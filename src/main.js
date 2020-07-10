@@ -1,30 +1,21 @@
 import LoL from './data/lol/lol.js';
+import { funcionDeFiltrado, funcionDeOrden, funcionEstrellitas, funcionEstrellitaOficial } from './data.js';
 
 const champions = LoL.data;
 const indexChampions = Object.values(champions);
-console.log(indexChampions);
 
-/* for (let i = 0; i < indexChampions.length; i++) {
-  const cajaCampeones = document.getElementById('Campeones');
-  const perfilCampeon = document.createElement('div');
-  perfilCampeon.setAttribute('id', 'displaycampeon');
-  perfilCampeon.setAttribute('class', 'displaycampeon');
-  const imgChampion = document.createElement('img');
-  imgChampion.setAttribute('src', indexChampions[i].splash);
-  cajaCampeones.appendChild(perfilCampeon);
-  perfilCampeon.appendChild(imgChampion);
-  const nombreCampeon = document.createElement('div');
-  nombreCampeon.setAttribute('class', 'nombrecampeon');
-  const championName = document.createElement('p');
-  championName.setAttribute('class', 'championname');
-  championName.innerHTML = indexChampions[i].name;
-  nombreCampeon.appendChild(championName);
-  perfilCampeon.appendChild(nombreCampeon);
-} */
+//Elementos Nav
+
+const buscador = document.getElementById('buscador');
+const lupa = document.getElementById('lupa');
+const filtro = document.getElementById('filtro');
+const orden = document.getElementById('orden');
+const cajaCampeones = document.getElementById('Campeones');
+
+
 
 const card = (data) => {
   for (let i = 0; i < data.length; i++) {
-    const cajaCampeones = document.getElementById('Campeones');
     const perfilCampeon = document.createElement('div');
     perfilCampeon.setAttribute('id', 'displaycampeon');
     perfilCampeon.setAttribute('class', 'displaycampeon');
@@ -36,6 +27,7 @@ const card = (data) => {
     nombreCampeon.setAttribute('class', 'nombrecampeon');
     const championName = document.createElement('p');
     championName.setAttribute('class', 'championname');
+    championName.setAttribute('id', 'championname');
     championName.innerHTML = data[i].name;
     nombreCampeon.appendChild(championName);
     perfilCampeon.appendChild(nombreCampeon);
@@ -44,141 +36,39 @@ const card = (data) => {
 
 card(indexChampions);
 
-const campeonesTanques = indexChampions.filter(tag => tag.tags == 'Tank')
-console.log(campeonesTanques);
+// Nav / Filtrado
 
-//Elementos Nav
+filtro.addEventListener('change', () => {
+  const rolType = filtro.value;
+ let CampeonesYaFiltrados = funcionDeFiltrado(rolType, indexChampions);
+ cajaCampeones.innerHTML = '';
+ card(CampeonesYaFiltrados);
+});
 
-const buscador = document.getElementById('buscador');
-const lupa = document.getElementById('lupa');
-const filtro = document.getElementById('filtro');
+// Nav / Orden
 
-/* caja funcionando
-const cajaCampeones = document.getElementById('Campeones');
-const perfilCampeon = document.createElement('div');
-perfilCampeon.setAttribute('id', 'displaycampeon');
-perfilCampeon.setAttribute('class', 'displaycampeon');
-const imgChampion = document.createElement('img');
-imgChampion.setAttribute('src', champions.Aatrox.img);
-cajaCampeones.appendChild(perfilCampeon);
-perfilCampeon.appendChild(imgChampion);
-const nombreCampeon = document.createElement('div');
-nombreCampeon.setAttribute('class', 'nombrecampeon');
-const championName = document.createElement('p');
-championName.setAttribute('class', 'championname');
-championName.innerHTML = champions.Aatrox.name;
-nombreCampeon.appendChild(championName);
-perfilCampeon.appendChild(nombreCampeon);
+orden.addEventListener('change', () => {
+  const OrdenAlfa = orden.value;
+  const campeonesOrden = funcionDeOrden(OrdenAlfa, indexChampions);
+  console.log('soy el console log del main' + campeonesOrden);
+  cajaCampeones.innerHTML = '';
+  card(indexChampions);
+});
 
-function showChampions() {
-  for (let i = 0; i < indexchampions.lenght; i++) {
-    const cajaCampeones = document.getElementById('Campeones');
-    const perfilCampeon = document.createElement('div');
-    perfilCampeon.setAttribute('id', 'displaycampeon');
-    perfilCampeon.setAttribute('class', 'displaycampeon');
-    cajaCampeones.appendChild(perfilCampeon)
+//función estrellitas ★
 
-  } 
-}
-*/
+indexChampions.forEach(funcionEstrellitas);
 
+//función estrellita oficial
 
 /*
-
-
-champions.forEach(mostrarCampeones);
-
-function mostrarCampeones() {
-  const cajaCampeones = document.getElementById('Campeones');
-  const perfilCampeon = document.createElement('div');
-  perfilCampeon.setAttribute('id', 'displaycampeon');
-  perfilCampeon.setAttribute('class', 'displaycampeon');
-  const imgChampion = document.createElement('img');
-  imgChampion.setAttribute('src', champions.img);
-  cajaCampeones.appendChild(perfilCampeon);
-  perfilCampeon.appendChild(imgChampion);
-  const nombreCampeon = document.createElement('div');
-  nombreCampeon.setAttribute('class', 'nombrecampeon');
-  const championName = document.createElement('p');
-  championName.setAttribute('class', 'championname');
-  championName.innerHTML = champions.name;
-  nombreCampeon.appendChild(championName);
-  perfilCampeon.appendChild(nombreCampeon);
-}
-
+const CajaNombreEstrellita = document.getElementById("championname").innerHTML;
+CajaNombreEstrellita.forEach(funcionEstrellitaOficial(CajaNombreEstrellita));
 */
-//const root = document.querySelector("#root");
+
+//Barra de búsqueda
 
 
-/*
-const requestURL = 'data/lol/lol.json';
-
-const request = new XMLHttpRequest();
-request.open('GET', requestURL, true);
-
-request.responseType = 'json';
-request.send();
-
-request.onload = function() {
-    const campeones = request.response;
-    populateRoot (campeones);
-    showCampeones(campeones)
-    console.log(campeones)
-}
-
-function populateRoot(jsonObj) {
-  const myH1 = document.createElement('h1');
-  root.textContent = jsonObj['data'];
-  root.appendChild(myH1);
-}
-
-function showCampeones(jsonObj) {
-  const heroes = jsonObj['data'];
-
-  for (let i = 0; i < heroes.lenght; i++) {
-    perfilCampeon.setAttribute('id', 'displaycampeon');
-    perfilCampeon.setAttribute('class', 'displaycampeon');
-
-    const nombreCampeon = document.createElement('div');
-    nombreCampeon.setAttribute('class', 'nombrecampeon');
-
-    nombreCampeon = heroes[i].name;
-    perfilCampeon = heroes[i].img
-
-    cajaCampeones.appendChild(perfilCampeon);
-    perfilCampeon.appendChild(nombreCampeon);
-  }
-}
-
-/*
-document.querySelector('#boton').addEventListener('click', traerDatos());
-
-function traerDatos(){
-
-    //console.log('dentro de la función');
-
-    const xhttp = new XMLHttpRequest();
-
-    xhttp.open('GET', 'data/lol/lol.json', true)
-
-    xhttp.send();
-
-    xhttp.onreadystatechange = function(){
-
-        if(this.readyState == 4 && this.status == 200){
-
-            //console.log(this.responseText);
-            let datos = JSON.parse(this.responseText);
-            console.log(datos);
-
-            for(let item of datos){
-                console.log(item.data);
-            }
-        }
-    }
-}
-
-*/
 /* Pasos Lógicos
 conectar base de datos al archivo main.js
     mostrar base de datos en consola
@@ -189,3 +79,15 @@ crear elementos para desplegar a los campeones
 ajustar la información de cada campeón a la caja que lo contiene (foto, nombre)
 repetir el proceso por la totalidad de personajes
 */
+
+/* Pasos de filtrado
+Mostrar los datos filtrados.
+  mostrar datos en consola para saber que se pueden filtrar.
+  aplicar el filtro para todas las categorías.
+Tomar el valor del selector "filtros", para poder modificar las tarjetas acorde a los datos filtrados según el valor del selector.
+  borrar tarjetas desplegadas
+  mostrar datos aplicando el filtro.
+  borrar tarjetas que no correspondan a los datos filtrados. */
+// Pasos de orden
+
+// Pasos de búsqueda
