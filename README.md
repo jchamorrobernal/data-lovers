@@ -6,7 +6,7 @@ League of Legends es un videojuego masivo de la categoría MOBA (arena de batall
 
 League of Legends nace el 27 de octubre 2009 y en sus 11 años de trayectoria solo ha crecido en cantidad de jugadores. Al ser un juego más viejo que otros (como lo es el popular juego Fortnite), muchos de sus usuarios han envejecido con el mismo juego. Estableciendo un margen etareo de entre 18 a 30 años de edad, se puede apreciar que la mayoría de los usuarios corresponden a jugadores no tan competitivos que están en rangos más bajos de la escala como se puede apreciar en el gráfico del sitio Esports Tales
 
-<img src="imagenesREADME/lol competitivo.jpg">
+<img src="imagenesREADME/lol competitivo.png">
 
 ## Historia de usuario
 
