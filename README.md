@@ -8,6 +8,8 @@ League of Legends nace el 27 de octubre 2009 y en sus 11 años de trayectoria so
 
 <img src="imagenesREADME/lol competitivo.png">
 
+Esto pone en evidencia la carencia de los usuarios por dominar toda la información referente al juego. La aplicación de ArmaTuLol viene a solventar esta carencia cubriendo la información sobre los campeones, sus roles y sus estadísticas. 
+
 ## Historia de usuario
 
 * Usuario n°1 
