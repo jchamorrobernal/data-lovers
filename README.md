@@ -1,8 +1,12 @@
 # Introducción
 
-League of Legends es un videojuego masivo de la categoría MOBA (arena de batalla multijugador en linea) que en año 2014 tuvo un total de 67 millones de jugadores al mes, lo que le permitió tomar el record de mayor cantidad de jugadores en el mundo. Para el año 2020, si bien sus números han bajado ligeramente, cuenta con una comunidad activa estimada en 115 millones según el sitio [Ranked Kings] ( https://rankedkings.com/blog/how-many-people-play-league-of-legends)
+League of Legends es un videojuego masivo de la categoría MOBA (arena de batalla multijugador en linea) que en año 2014 tuvo un total de 67 millones de jugadores al mes, lo que le permitió tomar el record de mayor cantidad de jugadores en el mundo. Para el año 2020, si bien sus números han bajado ligeramente, cuenta con una comunidad activa estimada en 115 millones según el sitio [Ranked Kings] (https://rankedkings.com/blog/how-many-people-play-league-of-legends)
 
 # Definición de usuario
+
+League of Legends nace el 27 de octubre 2009 y en sus 11 años de trayectoria solo ha crecido en cantidad de jugadores. Al ser un juego más viejo que otros (como lo es el popular juego Fortnite), muchos de sus usuarios han envejecido con el mismo juego. Estableciendo un margen etareo de entre 18 a 30 años de edad, se puede apreciar que la mayoría de los usuarios corresponden a jugadores no tan competitivos que están en rangos más bajos de la escala como se puede apreciar en el gráfico del sitio Esports Tales
+
+<img src="imagenesREADME/lol competitivo.jpg">
 
 ## Historia de usuario
 
@@ -21,7 +25,7 @@ Luego de realizar la busqueda, el usuario puede elegir a los héroes que deseen 
 
 ## Requerimientos de la web:
 
- - La información debe ser fácil de accesar.
+ - La información debe ser fácil de acceder y entender.
  - Permitir al usuario filtrar la información, ordenarla por parámetros de búsqueda alfabéticos y poder buscar por nombres de campeón. 
  - Diseño adecuado a los usuarios. 
 
@@ -73,6 +77,8 @@ Se realizará la correcta implementación de los formatos responsivos para móbi
 Se espera implementar el modal que presentará la información de los campeones al momento de escogerlos en la grilla. También se espera implementar la sección completa de "Elige tus campeones", que permita guardar hasta 5 personajes en las casillas asignadas. 
 
 Por otra parte se espera implementar la funcionalidad que genera un enlace al momento de tener el equipo armado para que este pueda ser compartido por redes sociales u otros medios por los usuarios.
+
+<img src="imagenesREADME/arma tu equipo.png"> 
 
 Por otra parte, se espera agregar una opción para poder compartir directamente en redes sociales el equipo creado, para que el sitio cuente con más viralización de sus elementos. 
 
