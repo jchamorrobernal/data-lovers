@@ -13,6 +13,8 @@ header {
     position: center;
     display: flex;
     flex-direction: column;
+    margin-bottom: 3%;
+    
 }
     .titulo {
         display: flex;
@@ -21,6 +23,7 @@ header {
         background-image: url("./images/lolheader.png");
         margin: 0;
         padding: 2%;
+        text-shadow: 5px 5px 5px #000000;
   
     }
 

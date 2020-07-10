@@ -1,18 +1,16 @@
 import LoL from './data/lol/lol.js';
-import { funcionDeFiltrado, funcionDeOrden, funcionEstrellitas, funcionEstrellitaOficial } from './data.js';
+import { funcionDeFiltrado, funcionDeOrden } from './data.js';
 
 const champions = LoL.data;
 const indexChampions = Object.values(champions);
 
-//Elementos Nav
+// Elementos Nav
 
 const buscador = document.getElementById('buscador');
 const lupa = document.getElementById('lupa');
 const filtro = document.getElementById('filtro');
 const orden = document.getElementById('orden');
 const cajaCampeones = document.getElementById('Campeones');
-
-
 
 const card = (data) => {
   for (let i = 0; i < data.length; i++) {
@@ -40,34 +38,35 @@ card(indexChampions);
 
 filtro.addEventListener('change', () => {
   const rolType = filtro.value;
- let CampeonesYaFiltrados = funcionDeFiltrado(rolType, indexChampions);
- cajaCampeones.innerHTML = '';
- card(CampeonesYaFiltrados);
+  const CampeonesYaFiltrados = funcionDeFiltrado(rolType, indexChampions);
+  cajaCampeones.innerHTML = '';
+  card(CampeonesYaFiltrados);
 });
 
 // Nav / Orden
 
 orden.addEventListener('change', () => {
   const OrdenAlfa = orden.value;
-  const campeonesOrden = funcionDeOrden(OrdenAlfa, indexChampions);
-  console.log('soy el console log del main' + campeonesOrden);
+  funcionDeOrden(OrdenAlfa, indexChampions);
   cajaCampeones.innerHTML = '';
   card(indexChampions);
 });
 
-//función estrellitas ★
+/* función estrellitas ★
 
-indexChampions.forEach(funcionEstrellitas);
+funcionEstrellitas(indexChampions);
 
-//función estrellita oficial
+console.log(championName);
+*/
+
+// función estrellita oficial
 
 /*
 const CajaNombreEstrellita = document.getElementById("championname").innerHTML;
 CajaNombreEstrellita.forEach(funcionEstrellitaOficial(CajaNombreEstrellita));
 */
 
-//Barra de búsqueda
-
+// Barra de búsqueda
 
 /* Pasos Lógicos
 conectar base de datos al archivo main.js
@@ -84,7 +83,8 @@ repetir el proceso por la totalidad de personajes
 Mostrar los datos filtrados.
   mostrar datos en consola para saber que se pueden filtrar.
   aplicar el filtro para todas las categorías.
-Tomar el valor del selector "filtros", para poder modificar las tarjetas acorde a los datos filtrados según el valor del selector.
+Tomar el valor del selector "filtros", para poder modificar las tarjetas
+acorde a los datos filtrados según el valor del selector.
   borrar tarjetas desplegadas
   mostrar datos aplicando el filtro.
   borrar tarjetas que no correspondan a los datos filtrados. */

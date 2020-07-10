@@ -1,4 +1,3 @@
-import LoL from './data/lol/lol.js';
 /* Manejo de data */
 
 // esta es una función de ejemplo
@@ -22,21 +21,24 @@ export const funcionDeFiltrado = (valor, data) => {
 export const funcionDeOrden = (valorOrden, data) => {
   if (valorOrden === 'AalaZ') {
     const campeonesOrdenados = data.sort().reverse();
-    };
+    return campeonesOrdenados;
+  }
 
   if (valorOrden === 'ZalaA') {
     const campeonesOrdenados = data.reverse();
     return campeonesOrdenados;
   }
 };
-export const funcionEstrellitaOficial = (constelacion) => {
+/*
+export const funcionEstrellitas = (constelacion) => {
+  const nombreEstrellita = constelacion.forEach(constelacion.name (+ '★'));
+  console.log(nombreEstrellita);
+  return nombreEstrellita;
+};
+*/
+
+/* export const funcionEstrellitaOficial = (constelacion) => {
 constelacion + '★';
 }
-
-
-export const funcionEstrellitas = (indexChampions) => {
-  const nombreCampeonesEstrellita = indexChampions.name + '★';
-  //console.log(nombreCampeonesEstrellita)
-}
-
-// Por cada campeón filtrado tiene que pintarse una estrellita. ForEach().
+Por cada campeón filtrado tiene que pintarse una estrellita. ForEach().
+*/
