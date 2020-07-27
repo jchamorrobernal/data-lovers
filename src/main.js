@@ -1,18 +1,24 @@
 import LoL from './data/lol/lol.js';
-import { funcionDeFiltrado, funcionDeOrden } from './data.js';
+
+import { funcionDeFiltrado, funcionDeOrden, funcionEstrellitas } from './data.js';
 
 const champions = LoL.data;
 const indexChampions = Object.values(champions);
 
+// Estrellitas
+
 // Elementos Nav
 
+/*
 const buscador = document.getElementById('buscador');
 const lupa = document.getElementById('lupa');
+*/
 const filtro = document.getElementById('filtro');
 const orden = document.getElementById('orden');
 const cajaCampeones = document.getElementById('Campeones');
 
 const card = (data) => {
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < data.length; i++) {
     const perfilCampeon = document.createElement('div');
     perfilCampeon.setAttribute('id', 'displaycampeon');
@@ -34,6 +40,10 @@ const card = (data) => {
 
 card(indexChampions);
 
+// estrellitas
+
+indexChampions.forEach(funcionEstrellitas());
+
 // Nav / Filtrado
 
 filtro.addEventListener('change', () => {
@@ -51,20 +61,6 @@ orden.addEventListener('change', () => {
   cajaCampeones.innerHTML = '';
   card(indexChampions);
 });
-
-/* función estrellitas ★
-
-funcionEstrellitas(indexChampions);
-
-console.log(championName);
-*/
-
-// función estrellita oficial
-
-/*
-const CajaNombreEstrellita = document.getElementById("championname").innerHTML;
-CajaNombreEstrellita.forEach(funcionEstrellitaOficial(CajaNombreEstrellita));
-*/
 
 // Barra de búsqueda
 

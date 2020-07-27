@@ -18,6 +18,7 @@ export const funcionDeFiltrado = (valor, data) => {
 
 // Variables de Orden
 
+// eslint-disable-next-line consistent-return
 export const funcionDeOrden = (valorOrden, data) => {
   if (valorOrden === 'AalaZ') {
     const campeonesOrdenados = data.sort().reverse();
@@ -29,13 +30,10 @@ export const funcionDeOrden = (valorOrden, data) => {
     return campeonesOrdenados;
   }
 };
-/*
-export const funcionEstrellitas = (constelacion) => {
-  const nombreEstrellita = constelacion.forEach(constelacion.name (+ '★'));
-  console.log(nombreEstrellita);
-  return nombreEstrellita;
+
+export const funcionEstrellitas = () => {
+  document.getElementById('championname').innerHTML += '★';
 };
-*/
 
 /* export const funcionEstrellitaOficial = (constelacion) => {
 constelacion + '★';
